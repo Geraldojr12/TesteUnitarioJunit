@@ -19,21 +19,35 @@ class CalculosTest {
 
 
     }
-
-
     @Test
-    public void retornarSomaQuandoValoresInformados(){
+    public void retornarSomaQuandoNumerosForemInformados(){
         Calculos numerosASomar = new Calculos();
-        double atual = numerosASomar.soma(15);
-        double esperado = 25;
+        double esperado = 28;
+        double atual = numerosASomar.soma(15,13);
         Assertions.assertEquals(esperado,atual);
-
     }
+
+
+//    @Test
+//    public void retornarSomaQuandoValoresInformados(){
+//        Calculos numerosASomar = new Calculos();
+//        double atual = numerosASomar.soma(15);
+//        double esperado = 25;
+//        Assertions.assertEquals(esperado,atual);
+//
+//    }
     @Test
     public void verificaNumeroPar(){
         Calculos paraVerificar = new Calculos();
         boolean informaNumeroPar = paraVerificar.informaNumeroPar(4);
         Assertions.assertTrue(informaNumeroPar);
+    }
+
+    @Test
+    public void verificaNumeroImpar(){
+        Calculos paraVerificar = new Calculos();
+        boolean informaNumeroPar = paraVerificar.informaNumeroPar(3);
+        Assertions.assertFalse(informaNumeroPar);
     }
 
     @Test
@@ -43,5 +57,7 @@ class CalculosTest {
         double esperado = 12;
         Assertions.assertEquals(esperado,atual);
     }
+
+
 
 }
